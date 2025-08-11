@@ -88,6 +88,5 @@ class Player:
         self.current_hp = self.hp
         self.combo = 0
         self.energy = 0 
-    
 
 
