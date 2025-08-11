@@ -1,0 +1,15 @@
+{
+    "Iron Sword": {
+        "attack": [3, 7],
+        "defence": [0, 2],
+        "cr": [0, 5],
+        "cd": [0, 10]
+    },
+    "Stone Sword": {
+        "attack": [3, 7],
+        "defence": [0, 2],
+        "cr": [0, 5],
+        "cd": [0, 10]
+    }
+
+}

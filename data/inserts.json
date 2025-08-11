@@ -1,0 +1,18 @@
+{
+    "Test_Insert": {
+        "main_stats": {
+            "attack%": 10,
+            "hp%": 12,
+            "defence%": 8,
+            "cr": 6,
+            "cd": 15
+        },
+        "sub_stats": {
+            "attack": 7,
+            "hp": 150,
+            "defence": 10,
+            "cr": 3,
+            "cd": 7
+        }
+    }
+}
