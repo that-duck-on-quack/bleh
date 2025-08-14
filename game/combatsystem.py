@@ -27,8 +27,28 @@ class Combatsystem:
         return False
     
     def bossturn(self):
-        if not self.player.counter(input("counter type")):
-            self.player.damage(self.boss.bossmove())
+
+        move = self.boss.bossmove()
+        print(f"boss attack with a {move} move")
+        counterfail,type = self.player.counter(input("counter type"))
+        print(self.boss.matchboss(move),"boss damage .exe")
+        match move:
+            case "basic" | "heavy":
+                if not counterfail:
+                    self.player.damage(self.boss.matchboss(move))
+                    print(f"{type} failed")
+                else: 
+                    print("Countered!")
+            case "dash":
+                if counterfail:
+                    if type == "parry":
+                        print("Parried!")
+                    else:
+                        print("Dodge failed")
+                        self.player.damage(self.boss.matchboss(move))
+                else:
+                    print("counter failed")
+                    self.player.damage(self.boss.matchboss(move))
         self.turn = 'next'
         if self.player.current_hp <= 0:
             print("gg boss win")

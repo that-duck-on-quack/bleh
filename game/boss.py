@@ -8,7 +8,7 @@ class bountyboss:
         self.hp = 1000
         self.attack = 10
         self.current_hp = self.hp
-        self.moveset = ['basic','heavy']
+        self.moveset = ['basic','heavy','dash']
     
     def bossattack(self,attack):
         if attack == "basic":
@@ -26,6 +26,11 @@ class bountyboss:
         print(f"Boss does a heavy attack. It does {damage}!")
         return damage
     
+    def Dash(self):
+        damage = self.attack * 5
+        print(f"Boss does a Dash attack. It does {damage}!")
+        return damage
+    
     def damage(self,damage):
         self.current_hp -= damage
 
@@ -38,10 +43,15 @@ class bountyboss:
     
     def bossmove(self):
         move = rand.choice(self.moveset)
+        return move
+    
+    def matchboss(self,move):
         match move:
             case 'basic':
                 return self.basic()
             case 'heavy':
                 return self.heavy()
+            case 'dash':
+                return self.Dash()
 
         

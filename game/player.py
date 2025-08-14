@@ -32,23 +32,19 @@ class player:
             case "parry":
                 if self.parrycharge > 0:
                     self.parrycharge -= 1 
-                    print("Parried!")
-                    return True
+                    return True,"parry"
                 else:
-                    print("Parry failed")
-                    return False
+                    return False,"parry"
             case "dodge":
                 if self.dodgecharge:
                     self.dodgecharge = False
-                    print("Dodged!")
-                    return True
+                    return True,"dodge"
                 else: 
-                    print("Dodge failed")
-                    return False
+                    return False,"dodge"
                 
             case _:
                 print("Uncountered!")
-                return False
+                return False,None
     def turntick(self):
         self.dodgecharge = True
         self.parrycharge += 1        
