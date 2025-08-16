@@ -1,5 +1,5 @@
-from game.player import player
-from game.boss import bountyboss
+from game.player import Player
+from game.boss import Bountyboss
 
 class Combatsystem:
     def __init__(self,player,boss):
@@ -31,7 +31,6 @@ class Combatsystem:
         move = self.boss.bossmove()
         print(f"boss attack with a {move} move")
         counterfail,type = self.player.counter(input("counter type"))
-        print(self.boss.matchboss(move),"boss damage .exe")
         match move:
             case "basic" | "heavy":
                 if not counterfail:

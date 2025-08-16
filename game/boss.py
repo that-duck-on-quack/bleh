@@ -1,6 +1,6 @@
 import random as rand
 
-class bountyboss:
+class Bountyboss:
     def __init__(self):
 
         self.mindelay = 1
@@ -9,26 +9,20 @@ class bountyboss:
         self.attack = 10
         self.current_hp = self.hp
         self.moveset = ['basic','heavy','dash']
-    
-    def bossattack(self,attack):
-        if attack == "basic":
-            return self.basic
-        if attack == "heavy":
-            return self.heavy
-
+        
     def basic(self):
         damage = self.attack
-        print(f"Boss does a basic attack. It does {damage}!")
+        print(f"Boss hits basic attack. It does {damage}!")
         return damage
     
     def heavy(self):
         damage = self.attack * 10
-        print(f"Boss does a heavy attack. It does {damage}!")
+        print(f"Boss hits heavy attack. It does {damage}!")
         return damage
     
-    def Dash(self):
+    def dash(self):
         damage = self.attack * 5
-        print(f"Boss does a Dash attack. It does {damage}!")
+        print(f"Boss hits Dash attack. It does {damage}!")
         return damage
     
     def damage(self,damage):
@@ -52,6 +46,6 @@ class bountyboss:
             case 'heavy':
                 return self.heavy()
             case 'dash':
-                return self.Dash()
+                return self.dash()
 
         

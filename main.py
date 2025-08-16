@@ -1,9 +1,9 @@
 from game.combatsystem import Combatsystem
-from game.player import player
-from game.boss import bountyboss
+from game.player import Player
+from game.boss import Bountyboss
 
-tes = player("peen")
-boss = bountyboss()
+tes = Player("peen")
+boss = Bountyboss()
 
 
 combatrun = Combatsystem(tes,boss)
